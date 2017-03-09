@@ -1,0 +1,24 @@
+@function get($obj, $selectors...) {
+    @return real-get($obj, $selectors);
+}
+@function real-get($obj, $selectors) {
+    @if length($selectors) > 1 {
+        $newSelectors: ();
+        @for $i from 2 through length($selectors) {
+            $newSelectors: append($newSelectors, nth($selectors, $i));
+        }
+        @return real-get(get($obj, nth($selectors, 1)), $newSelectors);
+    } @else {
+        @if type_of($obj) == map {
+            @return map-get($obj, nth($selectors, 1));
+        } @else if type_of($obj) == list {
+            @return nth($obj, nth($selectors, 1));
+        }
+    }
+}
+
+@mixin vendor-prefix($name, $value) {
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$vendor}#{$name}: #{$value};
+  }
+}

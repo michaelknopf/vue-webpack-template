@@ -1,0 +1,17 @@
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+assets/test/unit/coverage
+assets/config/personal.js
+assets/src/components/Inspinia.vue
+Thumbs.db
+.gradle
+build/
+.idea
+*.iml
+*.ipr
+*.iws
+.project
+.settings
+.classpath
