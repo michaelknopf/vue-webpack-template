@@ -7,7 +7,6 @@ assets/config/personal.js
 assets/src/components/Inspinia.vue
 Thumbs.db
 .gradle
-build/
 .idea
 *.iml
 *.ipr
