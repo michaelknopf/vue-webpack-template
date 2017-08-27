@@ -7,5 +7,5 @@ Run npm install.  (The port for the dev server can be set in config/index.js)
     
 ## Commands
 1. npm run dev: start dev server
-2. npm run build: create a "index.gsp" in grails/views, generate dependencies in assets/javascripts
+2. npm run build: minimize assets
 3. npm run test: run unit tests
